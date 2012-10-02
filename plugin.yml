@@ -1,0 +1,9 @@
+name: MonsterFlight
+main: org.monstercraft.flight.MonsterFlight
+version: 1.0
+author: Fletch_to_99
+description: Fix flight for client side mods.
+permissions:
+  monsterflight.fly:
+    description: Allow players to fly
+    default: op
