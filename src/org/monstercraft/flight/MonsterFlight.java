@@ -28,28 +28,28 @@ public class MonsterFlight extends JavaPlugin implements Listener {
     }
 
     @EventHandler(ignoreCancelled = true, priority = EventPriority.MONITOR)
-    public void onPlayerRespawn(final PlayerRespawnEvent event) {
-        setSurvivalFlightMode(event.getPlayer());
-    }
-
-    @EventHandler(ignoreCancelled = true, priority = EventPriority.MONITOR)
     public void onPlayerChangedWorld(final PlayerChangedWorldEvent event) {
-        setSurvivalFlightMode(event.getPlayer());
+        this.setSurvivalFlightMode(event.getPlayer());
     }
 
     @EventHandler(ignoreCancelled = true, priority = EventPriority.MONITOR)
     public void onPlayerGameModeChange(final PlayerGameModeChangeEvent event) {
-        setSurvivalFlightMode(event.getPlayer());
+        this.setSurvivalFlightMode(event.getPlayer());
     }
 
     @EventHandler(ignoreCancelled = true, priority = EventPriority.MONITOR)
     public void onPlayerJoin(final PlayerJoinEvent event) {
-        setSurvivalFlightMode(event.getPlayer());
+        this.setSurvivalFlightMode(event.getPlayer());
+    }
+
+    @EventHandler(ignoreCancelled = true, priority = EventPriority.MONITOR)
+    public void onPlayerRespawn(final PlayerRespawnEvent event) {
+        this.setSurvivalFlightMode(event.getPlayer());
     }
 
     @EventHandler(ignoreCancelled = true, priority = EventPriority.MONITOR)
     public void onPlayerTeleport(final PlayerTeleportEvent event) {
-        setSurvivalFlightMode(event.getPlayer());
+        this.setSurvivalFlightMode(event.getPlayer());
     }
 
     private void setSurvivalFlightMode(final Player player) {
